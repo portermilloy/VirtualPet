@@ -37,7 +37,13 @@
             picPet = new PictureBox();
             txtName = new TextBox();
             btnSetName = new Button();
+            txtRoomCode = new TextBox();
+            btnCreateRoom = new Button();
+            btnJoinRoom = new Button();
+            lblVisitor = new Label();
+            picVisitor = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)picPet).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)picVisitor).BeginInit();
             SuspendLayout();
             // 
             // gameTimer
@@ -89,7 +95,7 @@
             // 
             picPet.Location = new Point(227, 91);
             picPet.Name = "picPet";
-            picPet.Size = new Size(538, 347);
+            picPet.Size = new Size(333, 338);
             picPet.SizeMode = PictureBoxSizeMode.Zoom;
             picPet.TabIndex = 5;
             picPet.TabStop = false;
@@ -111,11 +117,61 @@
             btnSetName.UseVisualStyleBackColor = true;
             btnSetName.Click += btnSetName_Click;
             // 
+            // txtRoomCode
+            // 
+            txtRoomCode.Location = new Point(477, 49);
+            txtRoomCode.Name = "txtRoomCode";
+            txtRoomCode.PlaceholderText = "Enter room code";
+            txtRoomCode.Size = new Size(150, 31);
+            txtRoomCode.TabIndex = 8;
+            // 
+            // btnCreateRoom
+            // 
+            btnCreateRoom.Location = new Point(477, 9);
+            btnCreateRoom.Name = "btnCreateRoom";
+            btnCreateRoom.Size = new Size(150, 34);
+            btnCreateRoom.TabIndex = 9;
+            btnCreateRoom.Text = "Send Pet to Visit";
+            btnCreateRoom.UseVisualStyleBackColor = true;
+            btnCreateRoom.Click += btnCreateRoom_Click;
+            // 
+            // btnJoinRoom
+            // 
+            btnJoinRoom.Location = new Point(359, 9);
+            btnJoinRoom.Name = "btnJoinRoom";
+            btnJoinRoom.Size = new Size(112, 34);
+            btnJoinRoom.TabIndex = 10;
+            btnJoinRoom.Text = "Accept Pet";
+            btnJoinRoom.UseVisualStyleBackColor = true;
+            btnJoinRoom.Click += btnJoinRoom_Click;
+            // 
+            // lblVisitor
+            // 
+            lblVisitor.AutoSize = true;
+            lblVisitor.Location = new Point(633, 9);
+            lblVisitor.Name = "lblVisitor";
+            lblVisitor.Size = new Size(59, 25);
+            lblVisitor.TabIndex = 11;
+            lblVisitor.Text = "label1";
+            // 
+            // picVisitor
+            // 
+            picVisitor.Location = new Point(601, 91);
+            picVisitor.Name = "picVisitor";
+            picVisitor.Size = new Size(344, 338);
+            picVisitor.TabIndex = 12;
+            picVisitor.TabStop = false;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1066, 550);
+            Controls.Add(picVisitor);
+            Controls.Add(lblVisitor);
+            Controls.Add(btnJoinRoom);
+            Controls.Add(btnCreateRoom);
+            Controls.Add(txtRoomCode);
             Controls.Add(btnSetName);
             Controls.Add(txtName);
             Controls.Add(picPet);
@@ -125,8 +181,8 @@
             Controls.Add(lblStatus);
             Name = "Form1";
             Text = "Form1";
-            Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)picPet).EndInit();
+            ((System.ComponentModel.ISupportInitialize)picVisitor).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -141,5 +197,10 @@
         private PictureBox picPet;
         private TextBox txtName;
         private Button btnSetName;
+        private TextBox txtRoomCode;
+        private Button btnCreateRoom;
+        private Button btnJoinRoom;
+        private Label lblVisitor;
+        private PictureBox picVisitor;
     }
 }
